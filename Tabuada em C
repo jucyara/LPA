@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int numero;
+int contador = 0;
+
+main(){
+	
+	printf("TABUADA\n\n");
+	printf("Quer ver a tabuada de qual numero? ");
+	scanf("%d", &numero);
+	
+	for(contador = 0; contador <= 10; contador++){
+		
+		printf("%d x %d = %d\n", numero, contador, numero * contador);
+	}
+}
