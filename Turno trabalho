@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+main(){
+	
+	char turno, categoria;
+	int i, n_horas_trabalhadas;
+	float salario, percentual;
+	
+	for(i = 1; i <= 10; i++){
+		
+		salario = 1000;
+		
+		printf("Informe o numero de horas trabalhadas: ");
+		scanf("%d", &n_horas_trabalhadas);
+		
+		printf("Informe a categoria\n\nO - operario\nG - gerente \n\n");
+		scanf(" %c", &categoria);
+		
+		fflush(stdin);
+		printf("\nM-matutino\n");
+		printf("V-vespertino\n");
+		printf("N-noturno\n");
+		printf("\nDigite o codigo correspondente ao turno: ");
+		scanf("%c",&turno);
+		fflush(stdin);
+		
+		switch(categoria){
+			
+		case 'O': 
+			
+		if((turno == 'M') || (turno == 'V')){
+				
+		percentual = 0.1 * n_horas_trabalhadas;
+				
+		} else {
+		percentual = 0.05 * n_horas_trabalhadas;	
+	}
+		break;
+		
+		case 'G':
+				
+		if(turno == 'N'){
+					
+			percentual = 0.3 * n_horas_trabalhadas;
+					
+		}else{
+					
+		percentual = 0.2 * n_horas_trabalhadas;
+		
+		}
+		break;
+		}
+		printf("O novo salario sera: %.1f\n", salario + (salario * percentual));
+	}
+}
