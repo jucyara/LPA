@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+main(){
+	
+	int senha;
+	senha = -1;
+	
+	while(senha != 1234){
+		
+		printf("\nInforme sua senha: ");
+		scanf("%d", &senha);
+		
+		if(senha != 1234){
+			
+			printf("Acesso Negado!");
+				
+		} else
+		
+		printf("Acesso Permitido!");
+	}
+}
