@@ -1,0 +1,16 @@
+/*Escreva um programa para ler o raio de um circulo, calcular e escrever a sua area. */ 
+
+#include<stdio.h>
+
+int R;
+float Area;
+
+main() {
+	printf("Informe o valor do Raio: ");
+	scanf("%i", &R);
+	
+	Area = (3.14*R*R);
+	
+	printf("O Valor da area e: %.1f", Area);
+	
+}
