@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+/* programa para calcular a altura de 25 pessoas e exibir a maior altura
+a menor altura e a media da altura */
+
+int i, altura, maior, menor;
+float media;
+
+main(){
+	
+	for(i = 0; i < 3; i++){
+		
+	scanf("%d", &altura);
+		
+	if(altura > maior){
+			
+		maior = altura;
+		
+	}else if(altura < menor){
+			
+		menor = altura;
+	}
+		
+		media += altura;
+	}
+	
+	media /= i;
+	
+	printf("\nA altura maior sera: %d",maior);
+	printf("\nA altura menor sera: %d", menor);
+	printf("\nA media sera: %.2f", media);
+}
