@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+main(){
+	
+	int numero, fatorial, resultado = 1;
+	
+	printf("Informe um numero: ");
+	scanf("%d", &numero);
+	
+	for(fatorial = 1; fatorial <= numero; fatorial++){
+		
+		resultado = fatorial * resultado;
+	}
+	
+	printf("O fatorial de %d e: %d", numero, resultado);
+}
