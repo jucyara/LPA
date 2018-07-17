@@ -1,0 +1,43 @@
+#include<stdio.h>
+
+int codigo_cargo;
+float salario_atual, percentual;
+
+main(){
+	
+	printf("1-GERENTE DE PROJETOS\n\n");
+	printf("2-ANALISTA DE SISTEMAS\n\n");
+	printf("3-ARQUITETO DE SOFTWARE\n\n");
+	printf("4-DESENVOLVEDOR\n\n");
+	printf("Informe o codigo correspondente ao cargo: ");
+	scanf("%d", &codigo_cargo);
+	
+	printf("\nDigite o salario atual: ");
+	scanf("%f", &salario_atual);
+	
+	switch(codigo_cargo){
+		
+		case 1: percentual = 0.5;
+		printf("O aumento sera: %.1f\n", salario_atual * percentual);
+		printf("O novo salario sera: %.1f\n", salario_atual + (salario_atual * percentual));
+		break;
+		
+		case 2: percentual = 0.3;
+		printf("O aumento sera %1.f", salario_atual * percentual);
+		printf("O novo salario sera: %.1f", salario_atual + (salario_atual * percentual));
+		break;
+		
+		case 3: percentual = 0.1;
+		printf("O aumento sera %1.f", salario_atual * percentual);
+		printf("O novo salario sera: %.1f", salario_atual + (salario_atual * percentual));
+		break;
+		
+		case 4: printf("Nao tera aumento!");
+		break;
+		
+		default: printf("Codigo errado!");
+				
+	}
+	
+	printf("\n\nO novo salario sera: %f", salario_atual + novo_salario);
+}
