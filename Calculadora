@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+float x, y, resultado;
+char operacoes;
+
+main(){
+	
+	printf("informe o valor de X: ");
+	scanf("%f", &x);
+	
+	printf("informe o valor de Y: ");
+	scanf("%f", &y);
+	
+	printf("'+': SOMA\n");
+	printf("'-': SUBTRACAO\n");
+	printf("'*': MULTIPLICACAO\n");
+	printf("'/': DIVISAO\n");
+	scanf(" %c", &operacoes);
+	
+	fflush(stdin);
+	
+	switch(operacoes){ 
+		
+		case '+': resultado = x + y; 
+		printf("%f + %f = %f", x, y, x + y);
+		break;
+		
+		case '-': resultado = x - y; 
+		printf("%f - %f = %f", x, y, x - y);
+		break;
+		
+		case '*': resultado = x * y;
+		printf("%f * %f = %f", x, y, x * y);
+		break;
+		
+		case '/': resultado = x / y;
+		printf("%f / %f = %f", x, y, x / y);
+		break;
+		
+		default: printf("ERROR!!");
+	}
+}
