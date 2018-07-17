@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+int dias, opcao;
+float valor;
+
+main(){
+	
+	do{
+	printf("Quantidade de dias: ");
+	scanf("%d", &dias);
+	
+	if(dias < 15){
+		
+		valor = (50 * dias) + 2.50;	
+		
+	} else if(dias == 15){
+		
+		valor = (50 * dias) + 2.00;
+		
+	} else if(dias > 15){
+		
+		valor = (50 * dias) + 1.50;
+		
+	} else
+	
+	printf("NAO SE ENCAIXA NO PADRAO!");
+	
+	printf("Digite <0> p/sair ou <1> para continuar: ");
+	scanf("%d", &opcao);
+	
+	printf("O valor da diaria foi: %.2f\n", valor);
+	
+}while(opcao != 0);
+}
