@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+main(){
+	
+	int m = 0;
+	int f = 0;
+	int i;
+	char sexo;
+	float porce_mulheres;
+	
+	for(i = 0; i < 5; i++){
+		
+		printf("Qual o sexo? (m - Masculino f - Feminino): ");
+		scanf(" %c", &sexo);
+		
+		switch(sexo){
+			
+			case 'm': m++;
+			break;
+			
+			case'f': f++;
+			break;
+			
+			default: printf("ERRO - Voce digitou um caracter invalido");
+			break;
+		}
+	}
+	
+	porce_mulheres = (100 * f)/i;
+	
+	printf("Total de homens = %d\n", m);
+	printf("Porcentagem de mulheres = %.2f\n", porce_mulheres);
+}
