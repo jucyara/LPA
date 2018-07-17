@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+main(){
+	
+	float saldo_medio, percentual;
+	int opcao;
+	
+	do{
+		
+		printf("Informe o seu saldo: \n");
+		scanf("%f", &saldo_medio);
+		
+		if((saldo_medio >= 0) && (saldo_medio <= 465)){
+			
+			percentual = 0;
+			
+		} else if((saldo_medio > 465) && (saldo_medio <= 1000)){
+			
+			percentual = 0.2;
+			
+		}else if((saldo_medio > 1000) && (saldo_medio <= 2000)){
+			
+			percentual = 0.3;
+			
+		} else{
+			
+			percentual = 0.5; 
+		}
+		
+		printf("Credito %.2f \n", saldo_medio * percentual);
+		printf("Novo credito sera: %.2f\n", saldo_medio + (saldo_medio * percentual));
+		
+		printf("Continuar? 0-S e 1-N: \n");
+		scanf("%d", &opcao);
+		
+	}while(opcao == 0);
+}
