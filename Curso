@@ -1,0 +1,111 @@
+#include<stdio.h>
+
+main(){
+	
+	char opcao;
+	int idade, codigo_curso;
+	int aluno_eng = 0; /* Somando quantos alunos entre 20 e 25 */
+	int aluno_comp = 0;
+	int aluno_adm = 0;
+	int eng = 0; /* Quantidade de aluno por curso */
+	int comp = 0; /* Quantidade de aluno por curso */
+	int adm = 0; /* Quantidade de aluno por curso */
+	int soma_idade_eng, soma_idade_comp, soma_idade_adm; /* somar todas as idades de alunos de cada curso */
+	float media1, media2, media3; /* Média de alunos por curso */
+	
+	do{	
+	
+	printf("------------------------------");	
+	printf("\nInforme sua idade: ");
+	scanf("%d",&idade);
+		
+	printf("\n1-Engenharia\n");
+	printf("2-Computacao\n");
+	printf("3-Administracao\n");
+	printf("\nDigite o codigo correspondente ao curso: ");
+	scanf("%d",&codigo_curso);
+		
+	switch(codigo_curso){
+		
+	case 1: 
+		
+	if((idade >= 20) && (idade <= 25)){
+			
+		aluno_eng++; /*Quantidade de alunos entre 20 e 25 ano */
+	}
+	eng++;
+		
+	soma_idade_eng = soma_idade_eng + idade;
+	break;
+		
+	case 2: 
+		
+	if((idade >= 20) && (idade <= 25)){
+			
+		aluno_comp++; /*Quantidade de alunos entre 20 e 25 ano */
+	}
+	comp++;
+		
+	soma_idade_comp = soma_idade_comp + idade;
+	break;
+		
+	case 3: 
+		
+	if((idade <= 20) && (idade <= 25)){
+			
+		aluno_adm++; /*Quantidade de alunos entre 20 e 25 ano */
+	}
+	adm++;
+		
+	soma_idade_adm = soma_idade_adm + idade;
+	break;
+		
+	default: printf("Nao informado");
+	}
+	fflush(stdin);		
+	printf("\nContinuar? S-sim e N-nao: ");
+	scanf("%c", &opcao);	
+	fflush(stdin);	
+	}while(opcao == 'S');
+	
+	media1 = soma_idade_eng / eng;
+	media2 = soma_idade_comp / comp;
+	media3 = soma_idade_adm / adm;
+	
+	if((media1 < media2) && (media1 < media3)){
+		
+		printf("\nCurso Engenharia Menor: %f\n", media1);
+		
+	} else if((media2 < media1) && (media2 < media3)){
+		
+		printf("\nCurso Computação Menor: %f\n", media2);
+		
+	} else {	
+		printf("\nCurso Administracao Menor: %f\n", media3);		
+	}
+	
+	if((media1 > media2) && (media1 > media3)){
+		
+		printf("\nCurso Engenharia Maior: %\n", media1);
+		
+	} else if((media2 > media1) && (media2 > media3)){
+		
+		printf("\nCurso Computacao Maior: %f\n", media2);
+		
+	} else {	
+		printf("\nCurso Administracao Maior: %f\n", media3);		
+	}
+	
+	
+	printf("\nO numero de alunos entre 20 e 25 anos de Engenharia e: %d\n", aluno_eng);
+	printf("\nO numero de alunos entre 20 e 25 anos de Computacao e: %d\n", aluno_comp);
+	printf("\nO numero de alunos entre 20 e 25 anos de Administracao e: %d\n", aluno_adm);
+	
+	printf("\nO numero de alunos de Engenharia e: %d\n", eng);
+	printf("\nO numero de alunos de Computacao e: %d\n", comp);
+	printf("\nO numero de alunos de Administracao e: %d\n", adm);
+	
+	printf("\nA media de alunos de Engenharia e: %f\n", media1);
+	printf("\nA media de alunos de Computacao e: %f\n", media2);
+	printf("\nA media de alunos de Administracao e: %f\n", media3);
+}
