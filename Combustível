@@ -1,0 +1,53 @@
+#include<stdio.h>
+
+main(){
+	int opcao;
+	char combustivel;
+	float litro, valor;
+	
+	do{
+		
+		printf("-------------------------------");
+		printf("\nInforme sua opcao de combustivel: A-alcool ou G-gasolina: ");
+		scanf(" %c", &combustivel);
+		
+		printf("\nInforme quantos litros vai querer: ");
+		scanf("%f", &litro);
+		
+		switch(combustivel){
+			
+		case 'A':
+				
+			if((litro >= 20) && (litro <= 50)){
+					
+			valor = litro * 1.50;
+			printf("\nO valor final a ser pago sera: %.2f", valor);
+					
+			} else{
+				
+			valor = litro * 1.20;
+			printf("\nO valor final a ser pago sera: %.2f", valor);
+			}
+			break;
+			
+			case 'G':
+				
+			if((litro >= 20) && (litro <= 50)){
+					
+			valor = litro * 2.30;
+			printf("\nO valor final a ser pago sera: %.2f", valor);
+				
+		}else{
+			
+		valor = litro * 2.15;
+		printf("\nO valor final a ser pago sera: %.2f", valor);
+	}
+	break;	
+}
+
+printf("\nContinuar? <1> Sim ou <0> Nao: ");
+scanf("%d", &opcao);
+
+}while(opcao != 0);
+
+}
