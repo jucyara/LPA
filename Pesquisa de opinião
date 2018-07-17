@@ -1,0 +1,50 @@
+#include<stdio.h>
+
+main(){
+	
+	char opiniao;
+	int i, idade, maior_bom, soma_idade_C, resposta_A = 0, resposta_C = 0;
+	float media, resposta_B = 0, total = 0;
+	
+	for(i = 0; i <= 2; i++){
+	
+	printf("------------------------\n");
+	printf("\nInforme sua idade: ");
+	scanf(" %d", &idade);
+	
+	printf("\nDiga sua opiniao sobre o filme:\n\n A-Otimo\n\n B-Bom\n\n C-Regular\n\n");
+	scanf(" %c", &opiniao);
+	
+	switch(opiniao){
+		
+	case 'A':
+		
+		resposta_A++;
+	break;
+	
+	case 'B':
+		
+		resposta_B++;
+		
+		if(idade >= maior_bom){
+		
+		maior_bom = idade;
+	}
+	break;
+	
+	case 'C':
+		
+		resposta_C++;
+		
+		soma_idade_C += idade;
+	break;
+	}	
+		
+	}
+	resposta_B = (resposta_B * 100)/i;	
+	media = soma_idade_C/resposta_C;
+	
+	printf("\nA quantidade de respostas Otimo foi: %d", resposta_A);
+	printf("\nPorcentagem de resposta Boa %.2f e maior idade que utilizou essa opcao: %d", resposta_B, maior_bom);
+	printf("\nA media de idade das pessoas que responderam Regular foi: %.2f", media);
+}
