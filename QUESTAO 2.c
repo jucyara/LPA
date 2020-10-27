@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//
 main(){
 	
 	int refeicao, aluno = 0, aluno_menor10 = 0, aluno_entre10e20 = 0, aluno_maior20 = 0;
